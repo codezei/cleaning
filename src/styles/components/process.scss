@@ -1,0 +1,128 @@
+.process {
+    &__subtitle {
+        margin-bottom: 25px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &__list {
+        counter-reset: section;
+    }
+    &__item {
+        position: relative;
+        counter-increment: section;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        &:before {
+            content: counter(section);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            background: #fbfffc;
+            border: 5px solid #ddfade;
+            border-radius: 50%;
+            transition: all 400ms;
+            flex-shrink: 0;
+        }
+        &:hover:before {
+            background: #239c70;
+            border: 5px solid #8af1b3;
+            color: #fff;
+        }
+
+        
+    }
+    &-visual {
+        position: relative;
+        &__list {
+            counter-reset: item;
+        }
+        &__item {
+            position: absolute;
+            max-width: 200px;
+            counter-increment: item;
+            overflow: hidden;
+            &:before {
+                content: counter(item);
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                background: #fbfffc;
+                border: 5px solid #ddfade;
+                border-radius: 50%;
+                transition: all 400ms;
+                font-weight: 700;
+                
+            }
+
+
+            &:nth-child(1) {
+                left: 0;
+                top: 50%;
+                z-index: 5;
+            }
+            &:nth-child(2) {
+                left: 30%;
+                top: 40%;
+                z-index: 4;
+            }
+            &:nth-child(3) {
+                right: 10px;
+                top: 30%;
+                z-index: 3;
+            }
+            &:nth-child(4) {
+                right: 10%;
+                top: 60%;
+                z-index: 2;
+            }
+            &:nth-child(5) {
+                left: 50%;
+                top: 60%;
+                z-index: 1;
+            }
+
+
+            &-text {
+                background: #fadd01;
+                color: rgb(94, 94, 94);
+                margin-top: 10px;
+                padding: 5px;
+                width: 100%;
+               
+                transition: all 400ms;
+                transform: translateX(-100%);
+            }
+
+            &.active {
+
+                &:before {
+                    background: #239c70;
+                    border: 5px solid #8af1b3;
+                    color: #fff;
+                }
+                
+
+            }
+            &.active &-text {
+                transform: translateX(0);
+            }
+
+
+        }
+    }
+
+}

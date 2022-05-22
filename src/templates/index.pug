@@ -1,0 +1,25 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Купить {} недорого. Цены, отзывы. Закажите {} сейчас!";
+  - const themeColor = "#ffffff";
+
+append head
+
+append content
+  include components/load
+  include components/header
+  include components/promo
+  include components/services
+  include components/price
+  include components/process
+  include components/works
+  include components/how
+  
+
+append scripts
+  //- script(src="https://179523.selcdn.ru/public/prod-scripts/cis_footer.js")
+  //- script(defer src="https://179523.selcdn.ru/public/delivery-banner/banner.js")
