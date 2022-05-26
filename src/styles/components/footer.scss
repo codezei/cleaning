@@ -1,0 +1,19 @@
+.footer {
+    background: #124e38;
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__logo {
+        flex-shrink: 0;
+    }
+    @media screen and (min-width:1024px) {
+        &__inner {
+            align-items: center;
+        }
+    }
+}

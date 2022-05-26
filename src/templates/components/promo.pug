@@ -1,6 +1,6 @@
 section.promo
     .container-fluid.promo__container-fluid
-        .promo__left.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0s")
+        .col.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0s")
             .clean-process
                 img.clean-process__bg(src='img/carpet.jpg' alt='')
                 img.clean-process__cleaner(src='img/cleaner.png' alt='')
@@ -8,10 +8,10 @@ section.promo
                 h2.clean-process__title WYSOKIEJ JAKOŚCI CZYSZCZENIE
                     br
                     |NAJNOWSZY SPRZĘT
-        .promo__right
-            .promo__info
+        .col
+            .col__inner.promo__inner
                 h1.promo__title.wow.fadeInUp(data-wow-duration="2s") CleanTapi
                     br 
                     |pranie tapicerki
-                button.btn.wow.fadeIn(data-wow-duration="2s" type="button") Zamów pranie chemiczne
+                a.btn.wow.fadeIn(data-wow-duration="2s" href="tel:+48575256496") Zamów pranie tapicerki
                 //- h2.promo__subtitle Качественная чистка новейшим оборудованием

@@ -1,31 +1,52 @@
 .price {
     
-    &-table {
-        border: 1px solid #e2e8f0;
-        border-radius: 5px;
-        overflow: hidden;
-        background: #fff;
-        &__header {
-            background: #ddfade;
-            font-weight: 700;
-            font-size: 1.2em;
+    @media screen and (min-width: 320px) {
+        &__container-fluid {
+            display: flex;
+            flex-direction: column;
         }
-        &__row {
-            &:not(:last-child) {
-                border-bottom: 1px solid #e2e8f0;
-                box-shadow: 0 1px 0 #e2e8f0;
+        &__table {
+            max-width: 600px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        &-table {
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            overflow: hidden;
+            background: #fff;
+
+            &__header {
+                background: #ddfade;
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+            &__row {
+                &:not(:last-child) {
+                    border-bottom: 1px solid #e2e8f0;
+                    box-shadow: 0 1px 0 #e2e8f0;
+                }
+            }
+            &__col {
+                padding: 10px;
+                min-width: 100px;
             }
         }
-        &__col {
-            padding: 10px;
+    
+        &__footnote {
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
-    &__footnote {
-        margin-top: 10px;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+        &__container-fluid {
+            flex-direction: row;
+        }
     }
+
 }
 

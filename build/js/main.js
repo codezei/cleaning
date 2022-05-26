@@ -88,5 +88,31 @@
 
   hoverProcessItems();
 
+  function toggleMenu() {
+    var btn = document.querySelector(".header__btn");
+    var menu = document.querySelector(".header-mob");
+    btn.addEventListener('click', function (e) {
+      menu.style.display = "block";
+      setTimeout(function () {
+        menu.classList.add("header-mob--open");
+      }, 100);
+    });
+    menu.addEventListener("click", function (e) {
+      if (e.target.classList.contains("header-mob__close") || e.target === e.currentTarget) {
+        menu.classList.remove("header-mob--open");
+        setTimeout(function () {
+          menu.style.display = "none";
+        }, 400);
+      } else if (e.target.classList.contains("menu__link")) {
+        menu.classList.remove("header-mob--open");
+        setTimeout(function () {
+          menu.style.display = "none";
+        }, 400);
+      }
+    });
+  }
+
+  toggleMenu();
+
 }());
 //# sourceMappingURL=main.js.map
