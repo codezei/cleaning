@@ -20,6 +20,9 @@
         &__inner {
             height: 200px;
         }
+        &__subtitle {
+            text-align: center;
+        }
     }
     @media screen and (min-width: 480px) {
         &__title {
@@ -116,8 +119,8 @@
             animation-direction: alternate;
             animation-fill-mode: forwards;
             padding: 0 10px;
-    
         }
+
         &__bg {
             width: 100%;
             object-fit: cover;

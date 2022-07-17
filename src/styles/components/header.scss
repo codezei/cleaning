@@ -155,6 +155,9 @@
         text-decoration: none;
         display: block;
         text-align: center;
+        &-name {
+            display: block;
+        }
     }
     &__nav {
         display: flex;
