@@ -166,6 +166,10 @@
         &-item {
             padding: 0 5px;
             color: inherit;
+            transition: all 400ms;
+            &:hover {
+                color: #124e38;
+            }
         }
     }
 
