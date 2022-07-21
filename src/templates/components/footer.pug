@@ -1,7 +1,9 @@
 footer.footer 
     .container 
         .footer__inner 
-            img.logo.footer__logo(src="img/logo.png", alt="")
+            picture
+                source(srcset="img/logo.webp" type="image/webp")
+                img.logo.footer__logo(src="img/logo.png", alt="" width="50" height="50")
             .footer__menu 
                 ul.menu
                     li.menu__item 
