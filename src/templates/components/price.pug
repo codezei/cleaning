@@ -1,7 +1,13 @@
 section.price#price
     .container-fluid.price__container-fluid
         .price__left.col.col--lighter
-            img.col__img(src="img/price.jpg", alt="")
+            picture 
+                source(srcset="img/price-tablet.webp" type="image/webp" media="(max-width: 767px)")
+                source(srcset="img/price-tablet.jpg" media="(max-width: 767px)")
+                source(srcset="img/price-mob.webp" type="image/webp" media="(max-width: 479x)")
+                source(srcset="img/price-mob.jpg" media="(max-width: 479px)")
+                source(srcset="img/price.webp" type="image/webp")
+                img.col__img(src="img/price.jpg" alt="" loading="lazy")
             .price__title.title.col__title.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0s") Cennik
         .price__right.col
             .col__inner
@@ -23,7 +29,7 @@ section.price#price
                             td.price-table__col Materac dwuosobowy z jednej strony&nbsp;/ z obu stron 
                             td.price-table__col od&nbsp;99zł/169zł
                         tr.price-table__row.wow.slideInLeft(data-wow-duration="200ms" data-wow-delay="500ms")
-                            td.price-table__col Fotel rozkladany/Uszak 
+                            td.price-table__col Fotel rozkladany&nbsp;/ Uszak 
                             td.price-table__col od&nbsp;65zł
                         tr.price-table__row.wow.slideInLeft(data-wow-duration="200ms" data-wow-delay="600ms")
                             td.price-table__col Krzesła 
@@ -44,7 +50,7 @@ section.price#price
                             td.price-table__col Sprzątanie wnętrza auta + czyszczenie skory samochodowej
                             td.price-table__col od&nbsp;349zł
                         tr.price-table__row.wow.slideInLeft(data-wow-duration="200ms" data-wow-delay="1200ms")
-                            td.price-table__col Mycie okien: jednoskrzydłowe/dwuskrzydłowe
+                            td.price-table__col Mycie okien: jednoskrzydłowe&nbsp;/ dwuskrzydłowe
                             td.price-table__col od&nbsp;15zł/25zł
                     .price__footnote.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="1200ms") 
                         span Czyszczenie mebli skórzanych +30% od standardowej ceny.

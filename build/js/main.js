@@ -10,9 +10,62 @@
     });
   });
 
+  var contacts = (function () {
+    var parent = document.querySelector(".contacts__right");
+    var frame = document.createElement("iframe");
+    frame.setAttribute("src", "https://www.google.com/maps/d/u/0/embed?mid=1K1-Ng_AzxC6SD8lJuJxZL__T9gvKXyc&ehbc=2E312F");
+    frame.classList.add("contacts__map");
+    parent.append(frame);
+  });
+
+  var promo = (function () {
+    var block = document.querySelector(".clean-process");
+    block.classList.add("animate");
+  });
+
+  var callback = (function () {
+    var target = document.querySelector(".callback");
+    var form = document.querySelector(".callback-form");
+    var formWrap = document.querySelector(".callback__form");
+    var answer = document.querySelector(".callback__answer");
+
+    function toggleCallback() {
+      var btn = document.querySelector(".js-open-callback");
+      btn.addEventListener("click", function () {
+        target.classList.toggle("callback--open");
+        answer.classList.remove("callback__answer--open");
+        formWrap.style.display = "";
+      });
+    }
+
+    toggleCallback();
+    target.addEventListener("click", function (e) {
+      console.log(e.target);
+
+      if (e.currentTarget === e.target) {
+        e.currentTarget.classList.toggle("callback--open");
+      } else if (e.target.classList.contains("callback__close")) {
+        e.currentTarget.classList.toggle("callback--open");
+      }
+    });
+
+    function submitRequest() {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        formWrap.style.display = "none";
+        answer.classList.add("callback__answer--open");
+        form.reset();
+      });
+    }
+
+    submitRequest();
+  });
+
   // import './helpers/postDate';
 
-  function main() {}
+  function main() {
+    contacts();
+  }
 
   if (document.documentElement.clientWidth < 480) {
     window.addEventListener('scroll', function () {
@@ -20,6 +73,8 @@
     }, {
       once: true
     });
+  } else {
+    main();
   }
   var wow = new WOW({
     boxClass: 'wow',
@@ -38,11 +93,19 @@
     hideLoader();
     $('.works__list').slick({
       infinite: true,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
       adaptiveHeight: true,
-      arrows: true
-    }); // $(".twentytwenty-container").twentytwenty({
+      arrows: true,
+      responsive: [{
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+    promo();
+    callback(); // $(".twentytwenty-container").twentytwenty({
     //   default_offset_pct: 0.5, // How much of the before image is visible when the page loads
     //   orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
     //   no_overlay: true, //Do not show the overlay with before and after

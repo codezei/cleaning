@@ -1,16 +1,25 @@
 .reviews {
     @media screen and (min-width: 1024px) {
         position: relative;
-        background: url(../img/custom-bg-2.png), url(../img/custom-bg.png);
+        
         background-size: 300px, 300px;
         background-position: top 100px left, bottom right;
         background-repeat: no-repeat, no-repeat;
+        .webp & {
+            background-image: url(../img/custom-bg-2.webp), url(../img/custom-bg.webp);
+        }
+        .no-webp & {
+            background-image: url(../img/custom-bg-2.png), url(../img/custom-bg.png);
+        }
     }
     &__title {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 40px;
+        }
     }
     &__list {
-        padding: 25px 40px;
+        padding: 15px;
         border: 1px solid #dadce0;
         max-width: 800px;
         margin-left: auto;
@@ -35,6 +44,9 @@
             border-radius: 12px;
             background: #eee;
             transition: all 400ms;
+        }
+        @media screen and (min-width: 768px) {
+            padding: 25px 40px;
         }
 
 

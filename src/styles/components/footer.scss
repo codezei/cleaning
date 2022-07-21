@@ -10,6 +10,7 @@
     }
     &__logo {
         flex-shrink: 0;
+        margin-right: 10px;
     }
     @media screen and (min-width:1024px) {
         &__inner {

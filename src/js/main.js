@@ -1,7 +1,10 @@
 // import './helpers/postDate';
 import scrollSmooth from './helpers/smooth-scroll.js';
-
+import contacts from './modules/contacts.js'
+import promo from './modules/promo.js'
+import callback from './modules/callback.js'
 function main() {
+  contacts()
   
 }
 
@@ -28,14 +31,25 @@ let wow = new WOW(
 
 window.addEventListener("load", function() {
   wow.init();
-  hideLoader ()
+  hideLoader ();
   $('.works__list').slick({
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: true
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+
+    ]
   });
+  promo()
+  callback()
 
 
   // $(".twentytwenty-container").twentytwenty({

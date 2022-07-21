@@ -158,6 +158,10 @@
         &-name {
             display: block;
         }
+        transition: all 400ms;
+        &:hover {
+            color: #23a575;
+        }
     }
     &__nav {
         display: flex;
@@ -168,7 +172,7 @@
             color: inherit;
             transition: all 400ms;
             &:hover {
-                color: #124e38;
+                color: #23a575;
             }
         }
     }

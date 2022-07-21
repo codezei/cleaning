@@ -4,7 +4,7 @@
         &__inner{
             background: url(../img/cleaning.png);
             background-size: cover;
-            background-position: center;
+            background-position: center bottom;
     
         }
         &__container-fluid{
@@ -22,6 +22,7 @@
         }
         &__subtitle {
             text-align: center;
+            margin-bottom: 15px;
         }
     }
     @media screen and (min-width: 480px) {
@@ -71,15 +72,17 @@
             top: 50%;
             transform: translate(0, -50%);
             height: 50%;
-            animation-name: moveCleaner;
-            animation-duration: 3s;
-            animation-timing-function: linear;
-            animation-iteration-count: 1;
-            animation-direction: alternate;
-            animation-fill-mode: forwards;
             pointer-events: none;
-    
             z-index: 3;
+            .animate & {
+                animation-name: moveCleaner;
+                animation-duration: 3s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+            }
+            
         }
         &__clean {
             position: absolute;
@@ -90,13 +93,16 @@
             width: 100%;
             z-index: 1;
             background: rgba($color: #fff, $alpha: 0.1);
-            animation-name: moveClean;
-            animation-duration: 3s;
-            animation-timing-function: linear;
-            animation-iteration-count: 1;
-            animation-direction: alternate;
-            animation-fill-mode: forwards;
             pointer-events: none;
+            .animate & {
+                animation-name: moveClean;
+                animation-duration: 3s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+            }
+            
     
         }
         &__title {
@@ -111,15 +117,20 @@
             left: 20%;
             width: 80%;
             text-transform: uppercase;
-            animation-name: showTitle;
-            animation-duration: 1s;
-            animation-delay: 2s;
-            animation-timing-function: linear;
-            animation-iteration-count: 1;
-            animation-direction: alternate;
-            animation-fill-mode: forwards;
+
             padding: 0 10px;
+            .animate & {
+                animation-name: showTitle;
+                animation-duration: 1s;
+                animation-delay: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+            }
         }
+
+
 
         &__bg {
             width: 100%;

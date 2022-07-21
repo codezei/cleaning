@@ -2,7 +2,13 @@ section.promo
     .container-fluid.promo__container-fluid
         .col.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0s")
             .clean-process
-                img.clean-process__bg(src='img/carpet.jpg' alt='')
+                picture 
+                    source(srcset="img/carpet-tablet.webp" type="image/webp" media="(max-width: 767px)")
+                    source(srcset="img/carpet-tablet.jpg" media="(max-width: 767px)")
+                    source(srcset="img/carpet-mob.webp" type="image/webp" media="(max-width: 479x)")
+                    source(srcset="img/carpet-mob.jpg" media="(max-width: 479px)")
+                    source(srcset="img/carpet.webp" type="image/webp")
+                    img.clean-process__bg(src='img/carpet.jpg' alt='')
                 img.clean-process__cleaner(src='img/cleaner.png' alt='')
                 .clean-process__clean
                 h2.clean-process__title WYSOKIEJ JAKOŚCI CZYSZCZENIE
@@ -12,5 +18,5 @@ section.promo
             .col__inner.promo__inner
                 h1.promo__title.wow.fadeInUp(data-wow-duration="2s") CleanTapi
                 h2.promo__subtitle.wow.fadeInUp(data-wow-duration="2s" data-wow-delay="1s") Pranie tapicerki, dywanów, czyszczenie skóry, mycie okien
-                a.btn.wow.fadeIn(data-wow-duration="2s" href="tel:+48575256496") Zamów pranie tapicerki
+                button.js-open-callback.btn.wow.fadeIn(type="button" data-wow-duration="2s") Zamów pranie tapicerki
                 //- h2.promo__subtitle Качественная чистка новейшим оборудованием

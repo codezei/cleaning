@@ -11,11 +11,17 @@
             height: 100%;
             left: 0;
             top: 0;
-            background: url(../img/bg.jpg);
+            
             background-position: center;
             background-size: cover;
             z-index: -1;
-            opacity: 0.1;
+            opacity: 0.2;
+            .webp & {
+                background-image: url(../img/bg.webp);
+            }
+            .no-webp & {
+                background-image: url(../img/bg.jpg);
+            }
         }
         &__list {
             display: flex;
