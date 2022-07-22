@@ -47,6 +47,7 @@ window.addEventListener("load", function() {
       }
 
     ]
+  
   });
   promo()
   callback()
@@ -62,6 +63,10 @@ window.addEventListener("load", function() {
   // });
 
   scrollSmooth();
+
+  setTimeout(function () {
+    hideLoader ();
+  }, 10000)
 })
 
 
