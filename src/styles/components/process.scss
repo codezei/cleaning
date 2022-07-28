@@ -184,9 +184,9 @@
             margin-bottom: 0;
             
         }
-        &-visual {
-            flex-shrink: 0;
-        }
+        // &-visual {
+        //     flex-shrink: 0;
+        // }
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             &__list {
                 width: 40%;

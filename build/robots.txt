@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://codezei.github.io/cleaning/build/sitemap.xml
