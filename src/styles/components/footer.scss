@@ -7,10 +7,14 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        margin-bottom: 15px;
     }
     &__logo {
         flex-shrink: 0;
         margin-right: 10px;
+    }
+    &__copyright {
+        text-align: center;
     }
     @media screen and (min-width:1024px) {
         &__inner {

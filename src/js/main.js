@@ -119,3 +119,20 @@ function toggleMenu () {
 }
 
 toggleMenu ()
+
+function toggleCredits () {
+  let btn = document.querySelector('.credits-btn')
+  let creditsBlock = document.querySelector('.credits')
+
+  btn.addEventListener('click', function (e) {
+    creditsBlock.classList.toggle('open')
+  })
+
+  creditsBlock.addEventListener('click', function (e) {
+    if (e.target === e.currentTarget || e.target.classList.contains('credits__close')) {
+      creditsBlock.classList.remove('open')
+    }
+  })
+}
+
+toggleCredits ()
